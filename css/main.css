@@ -1,0 +1,2292 @@
+/* CSS Variables */
+:root {
+  /* Brand Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --primary-color: rgba(37, 95, 62);
+  --primary-red: rgb(172, 13, 13);
+  --primary-blue: rgb(3, 3, 235);
+
+  /* Typography */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Montserrat", sans-serif;
+
+  /* Transitions */
+  --transition: all 150ms ease-in-out;
+
+  /* Shadows */
+  --image-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+
+  /* Border */
+  --border: 2px solid var(--white);
+
+  /* Breakpoints */
+  --desktop: 1100px;
+  --tablet: 1025px;
+  --small-tablet: 935px;
+  --mobile: 460px;
+}
+
+/* Reset & Base Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.red {
+  color: var(--primary-red);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.blue {
+  color: var(--primary-blue);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.text-left {
+  text-align: left;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--black);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+section {
+  padding: 100px 0;
+}
+
+section.hero {
+  padding: 150px 50;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.bold-red {
+  font-weight: 900;
+  color: var(--primary-red);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.bold-green {
+  font-weight: 900;
+  color: var(--primary-color);
+}
+
+.green {
+  color: var(--primary-color);
+}
+
+.blue-bold {
+  font-weight: 900;
+  color: var(--primary-blue) !important;
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.link a {
+  text-decoration: underline var(--primary-color);
+  font-weight: 600;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+  background-color: transparent;
+  color: var(--white);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-application-contact {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.btn-application-contact:hover {
+  background-color: var(--black);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-donate-contact {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.btn-donate-contact:hover {
+  background-color: var(--black);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-donate {
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 50px;
+  width: 130px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-donate:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--primary-color);
+  color: var(--white);
+}
+
+.btn-endorsement {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-endorsement:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-endorsement-application {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.btn-endorsement-application:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-past-candidates {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-past-candidates:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-voter-registration-check {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-voter-registration-check:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-voter-registration {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-voter-registration:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-polling-location-check {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-polling-location-check:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-sample-ballot {
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.btn-sample-ballot:hover {
+  background-color: var(--black);
+  border: 3px solid var(--white);
+  color: var(--white);
+}
+
+.btn-donate-footer {
+  background-color: var(--white);
+  color: var(--black);
+  height: 50px;
+  width: 140px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-donate-footer:hover {
+  background-color: var(--black);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.nav-menu > li > a.btn-donate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  max-width: 1000px;
+}
+
+/* Header Styles */
+header {
+  background: transparent;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.header-content {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  order: 1;
+}
+
+.logo {
+  width: 175px;
+  height: auto;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Navigation */
+nav {
+  order: 2;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu > li > a {
+  color: var(--white);
+  text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color),
+    -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+  font-weight: 900;
+  padding: 0.5rem 0.5rem;
+  display: block;
+  font-size: 1.6rem;
+  padding-bottom: 0.75rem;
+}
+
+.nav-menu > li > a:hover {
+  color: var(--primary-color);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+/* Video background wrapper */
+.nav-header {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 1rem;
+}
+
+/* The actual background video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  background-position: center;
+}
+
+/* Dark overlay on top of the video */
+.nav-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure header and hero sit above the video and overlay */
+.nav-header .hero {
+  position: relative;
+  z-index: 2;
+}
+
+.nav-header header {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 3px 0;
+  transition: var(--transition);
+  border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ==========================================
+   Home Page
+   ========================================== */
+
+/* Hero Section */
+.hero {
+  padding: 90px 0 100px 0;
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: 100px;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 40px;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.hero h2 {
+  font-size: 35px;
+  color: var(--white);
+  text-align: center;
+  font-size: 45px;
+  text-shadow: -0.5px -0.5px 0 var(--primary-color),
+    0.5px -0.5px 0 var(--primary-color), -0.5px 0.5px 0 var(--primary-color),
+    0.5px 0.5px 0 var(--primary-color);
+}
+
+.hero-btn-grid {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin: 0 auto;
+}
+
+/* Tennsssee Section */
+.tennessee {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(../images/tennessee-map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+.tennessee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.tennessee-grid-item-left {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.tennessee-grid-item-left h2 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--black);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.tennessee-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.tennessee-stat-grid-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+
+.tennessee-stat-grid-item h3 {
+  font-size: 65px;
+  text-align: center;
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+}
+
+.tennessee-stat-grid-item h2 {
+  font-size: 26px;
+  text-align: center;
+  font-weight: 500;
+  margin-top: -1rem;
+}
+
+/* Carousel Container */
+.endorsed-candidate-header h2 {
+  color: var(--white);
+  text-shadow: -1.5px -1.5px 0 var(--black), 1.5px -1.5px 0 var(--black),
+    -1.5px 1.5px 0 var(--black), 1.5px 1.5px 0 var(--black);
+  font-size: 46px;
+}
+
+.endorsed-candidate-slider {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(163, 159, 159, 0.6),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(../images/vote-buttons.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+  background-position: center;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  border: 5px solid var(--primary-color);
+  border-radius: 15px;
+}
+
+.candidate-carousel {
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+/* Carousel Slides Wrapper */
+.carousel-slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  will-change: transform;
+}
+
+/* Base slide */
+.carousel-slide {
+  flex: 0 0 25%;
+  min-width: 25%;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Candidate slide — 4 per view = 25% each */
+.carousel-candidate-slide {
+  flex: 0 0 25%;
+  min-width: 25%;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Placeholder */
+.carousel-placeholder {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-placeholder-icon {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.carousel-placeholder-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.candidate-carousel .carousel-placeholder-text {
+  display: none;
+}
+
+/* ==========================================
+   Pages Header Content
+   ========================================== */
+/* All Pages Other Than Home Header */
+.nav-header-about-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/rural-farm-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header-endorsement-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/background-farm-endorsement-page.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header-endorsement-application-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/background-dirt-road-endorsement-application.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header-endorsement-candidates-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/background-farm-endorsed-candidates.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header-elections-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(../images/background-polling-station-elections.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-header-contact-pages {
+  padding: 20px 0;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(../images/background-mailbox-contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-menu-pages {
+  margin-top: -30px;
+}
+
+.nav-menu-pages {
+  margin-top: -30px;
+  padding: 30px 0;
+}
+
+.nav-menu-pages > li > a {
+  color: var(--white);
+  text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color),
+    -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+  font-weight: 900;
+  padding: 1.1rem 0.5rem;
+  display: block;
+  font-size: 1.6rem;
+  padding-bottom: 0.75rem;
+}
+
+.logo-container-pages img {
+  margin-top: -20px;
+}
+
+.pages-header {
+  margin: 0;
+  padding: 0;
+  margin-bottom: -20px;
+}
+
+.pages-header h1 {
+  font-weight: 700;
+  font-size: 100px;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+  margin-top: -10px;
+}
+
+.background-image.nav-header {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* ==========================================
+   About Page
+   ========================================== */
+/* About Section */
+.about-section {
+  padding: 2rem 0;
+}
+
+.about-section-text-box {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+}
+
+.about-section h2 {
+  margin-bottom: 2rem;
+}
+
+.about-section-content {
+  max-width: 1100px;
+}
+
+.about-us-video {
+  float: left;
+  margin: 0 2rem 1rem 0;
+}
+
+.about-us-video iframe {
+  display: block;
+  width: 400px;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  border: 3px solid var(--primary-color);
+  box-shadow: var(--image-shadow);
+}
+
+.about-section-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Clearfix so the section doesn't collapse */
+.about-section-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* About Kate Section */
+.about-kate {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(../images/kate-campaign-car.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 0;
+}
+
+.about-kate-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
+}
+
+.kate-grid-item-text {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+}
+
+.kate-grid-item-image {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.kate-grid-item img {
+  width: 350px;
+  height: auto;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+}
+
+/* ==========================================
+   Endorsement Page
+   ========================================== */
+.endorsed-candidates-years {
+  margin-top: 8rem;
+}
+
+.apply-for-endorsement-text {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px 30px 50px 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: -4rem;
+}
+
+.apply-for-endorsement-text h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: -1rem;
+}
+
+.apply-for-endorsement-text p {
+  margin: 0.5rem;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.about-endorsement-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.about-endorsement-grid-item {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+}
+
+.about-endorsement-grid-item h3 {
+  text-align: center;
+  margin: 0;
+  color: var(--white);
+  margin-bottom: 2rem;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.about-endorsement-grid-item p {
+  text-align: center;
+  color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.endorsed-candidates-elements {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px 30px 50px 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: -12rem;
+  margin-bottom: 2rem;
+}
+
+.endorsed-candidates-grid {
+  display: grid;
+  grid-template-columns: 0.2fr 2fr;
+  grid-gap: 2.5rem;
+  margin-top: -2rem;
+}
+
+.endorsed-candidates-grid-item h2 {
+  font-size: 35px;
+}
+
+.endorsed-candidates-grid-item h3 {
+  text-align: right;
+  font-weight: 900;
+  font-size: 35px;
+  margin-top: 2rem;
+}
+
+.endorsed-candidates-grid-item a {
+  text-align: right;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  line-height: 2;
+  display: flex;
+  justify-content: right;
+  align-items: column;
+}
+
+.endorsed-candidates-grid-item a:hover {
+  color: var(--primary-color);
+}
+
+.endorsed-candidates-grid-item-text p {
+  font-weight: 400;
+  text-align: left;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.endorsed-candidate-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.endorsed-candidate-image-grid-item img {
+  width: 270px;
+  height: auto;
+}
+
+/* ==========================================
+   Elections Page
+   ========================================== */
+.elections-content {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px 30px 50px 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: -4rem;
+}
+
+.registered-to-vote h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: -1rem;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.registered-to-vote p {
+  text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+    -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+  text-align: center;
+}
+
+.register-to-vote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.register-to-vote-grid-item {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+}
+
+.register-to-vote-grid-item h3 {
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.register-to-vote-grid-item p {
+  margin: 0;
+  margin-top: 2rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.register-to-vote-block-text {
+  height: 60px;
+}
+
+.polling-location h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 4rem;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.polling-location p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+    -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+}
+
+.polling-location-box {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: 1rem;
+  height: 240px;
+}
+
+.polling-location-box h3 {
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.polling-location-box p {
+  margin: 0;
+  margin-top: 2rem;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.sample-ballot {
+  margin-top: 4rem;
+}
+
+.sample-ballot h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: 4rem;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.sample-ballot p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+    -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+}
+
+.review-sample-ballot {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: 1rem;
+  height: 200px;
+}
+
+.review-sample-ballot h3 {
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.review-sample-ballot p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+    -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+}
+
+/* ==========================================
+   Contact Page
+   ========================================== */
+.contact-text-box {
+  background-color: rgba(216, 210, 211, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px 30px 50px 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: -4rem;
+}
+
+.contact-text-box h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: -1rem;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+}
+
+.contact-text-box p {
+  margin: 0.5rem;
+  line-height: 1.5;
+  font-size: 18px;
+  text-shadow: -0.2px -0.2px 0 var(--white), 0.2px -0.2px 0 var(--white),
+    -0.2px 0.2px 0 var(--white), 0.2px 0.2px 0 var(--white);
+  text-align: center;
+}
+
+.contact-text-box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.contact-text-box-grid-item {
+  background-color: rgba(37, 95, 62, 0.79);
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: var(--image-shadow);
+  margin-top: 1rem;
+}
+
+.contact-text-box-grid-item h3 {
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.contact-text-box-grid-item p {
+  text-align: center;
+  color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+  margin-top: 1rem;
+}
+
+.contact-slogan p {
+  font-size: 24px;
+  color: var(--black);
+  text-align: center;
+  text-shadow: -0.2px -0.2px 0 var(--white), 0.2px -0.2px 0 var(--white),
+    -0.2px 0.2px 0 var(--white), 0.2px 0.2px 0 var(--white);
+  margin-top: 4rem;
+  font-weight: 900;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+footer {
+  color: var(--white);
+  background: linear-gradient(
+    180deg,
+    rgba(59, 150, 95, 1) 0%,
+    rgba(37, 120, 72, 1) 30%,
+    rgba(37, 95, 62, 1) 100%
+  );
+  overflow: hidden;
+}
+
+footer h3 {
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black),
+    -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+footer h4 {
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+footer p {
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr;
+  grid-gap: 2rem;
+}
+
+.footer-grid-item {
+  margin-top: 2rem;
+}
+
+.footer-mobile-links-grid {
+  display: none;
+}
+
+/* Footer Logo */
+.footer-donate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.footer-donate-other {
+  margin-top: 1rem;
+}
+
+.footer-follow-mobile {
+  display: none;
+}
+
+.footer-follow h4 {
+  font-size: 1.3rem;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.footer-follow a:hover {
+  color: var(--purple);
+}
+
+.footer-donate-other a {
+  background-color: var(--white);
+  color: var(--black);
+  height: 50px;
+  width: 150px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--black);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer-donate-other a:hover {
+  background-color: var(--black);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.footer-copyright {
+  margin-top: 3rem;
+  font-weight: 300;
+  padding: 0 0 20px 0;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.important-links {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.important-links li {
+  list-style: none;
+  padding: 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
+}
+
+.important-links li:hover {
+  color: var(--black);
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.footer-social-icon {
+  font-size: 40px;
+}
+
+.footer-social-icon:hover {
+  color: var(--black);
+}
+
+/* 1024px breakpoint */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  header {
+    position: relative;
+    z-index: 99999;
+    overflow: visible;
+    padding-top: 1rem;
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: visible;
+  }
+
+  .logo-container {
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    order: 2;
+  }
+
+  nav {
+    order: 2;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    gap: 0;
+    color: white;
+    background-color: var(--black);
+    padding: 1rem 0;
+    z-index: 99999;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .nav-menu > li {
+    width: 100%;
+  }
+
+  .nav-menu > li > a {
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-donate {
+    width: auto;
+    margin: 0.5rem 1rem 1.5rem 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    box-sizing: content-box;
+  }
+
+  .nav-menu > li:last-child {
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-menu > li:last-child a.btn-donate {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1.5px solid var(--white) !important;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    padding: 50px 0 15px 0 !important; /* ← reduce bottom from 50px to 15px */
+  }
+
+  .nav-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 0, 0, 0.4)
+    );
+    z-index: 1;
+    pointer-events: none;
+    height: 45vh;
+  }
+
+  .nav-header {
+    height: 45vh; /* ← fixed height instead of min-height, locks to video size */
+    min-height: unset;
+    overflow: hidden; /* ← clips anything that extends beyond the video */
+    margin-bottom: -1rem;
+  }
+
+  .bg-video {
+    height: 45vh;
+  }
+
+  .background-image {
+    padding: 0;
+  }
+
+  .hero h1 {
+    font-size: 75px;
+    color: var(--white);
+    text-shadow: -0.7px -0.7px 0 var(--black), 0.7px -0.7px 0 var(--black),
+      -0.7px 0.7px 0 var(--black), 0.7px 0.7px 0 var(--black);
+    line-height: 1;
+  }
+
+  .hero h2 {
+    font-size: 35px;
+    text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+      -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+  }
+
+  .red {
+    text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+      -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+  }
+
+  .blue {
+    text-shadow: -0.2px -0.2px 0 var(--black), 0.2px -0.2px 0 var(--black),
+      -0.2px 0.2px 0 var(--black), 0.2px 0.2px 0 var(--black);
+  }
+
+  .btn {
+    background-color: var(--primary-color);
+  }
+
+  /* Tennsssee Section Adjustments */
+  .tennessee {
+    padding: 60px 0;
+  }
+
+  .tennessee-grid-item-left h2 {
+    font-size: 32px;
+  }
+
+  .tennessee-stat-grid-item h3 {
+    font-size: 55px;
+  }
+
+  .tennessee-stat-grid-item h2 {
+    font-size: 24px;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Carousel adjustments */
+  .carousel-slide {
+    flex: 0 0 25%;
+    min-width: 25%;
+  }
+
+  .pages-header-container h1 {
+    font-size: 85px;
+  }
+
+  .kate-grid-item-image {
+    position: static;
+    top: 2rem;
+    align-self: start;
+  }
+
+  /* Endorsed Candidate Adjustments */
+  .endorsed-candidates-grid-item h2 {
+    font-size: 32px;
+  }
+
+  .apply-for-endorsement-text h2 {
+    font-size: 32px;
+    margin-top: -0.5rem;
+  }
+
+  .endorsed-candidates-grid-item h3 {
+    font-size: 32px;
+    margin-top: 1.5rem;
+  }
+
+  .endorsed-candidate-image-grid {
+    grid-gap: 1rem;
+  }
+
+  .endorsed-candidate-image-grid-item img {
+    width: 200px;
+  }
+
+  /* Elections Page Adjustments */
+  .register-to-vote-grid-item h3 {
+    font-size: 28px;
+  }
+
+  .polling-location-box h3 {
+    font-size: 28px;
+  }
+
+  .contact-text-box-grid-item h3 {
+    font-size: 28px;
+  }
+
+  .contact-slogan p {
+    margin-top: 3rem;
+  }
+}
+
+/* 935px breakpoint */
+@media (max-width: 935px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    gap: 0;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 1rem 0;
+    z-index: 99999;
+    overflow-y: auto; /* ← makes menu scrollable if items overflow */
+  }
+
+  .hero {
+    padding: 50px 0 60px 0;
+  }
+
+  .nav-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 0, 0, 0.4)
+    );
+    z-index: 1;
+    pointer-events: none;
+    height: 50vh;
+  }
+
+  /* Video background wrapper */
+  .nav-header {
+    position: relative;
+    height: 50vh;
+    min-height: unset;
+    padding-top: 1rem;
+    overflow: hidden;
+  }
+
+  /* The actual background video */
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center;
+  }
+
+  .contact-text-box {
+    background-color: rgba(216, 210, 211, 0.79);
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 30px 15px 50px 15px;
+    box-shadow: var(--image-shadow);
+    margin-top: -4rem;
+  }
+
+  .btn-donate-contact {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-application-contact {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-donate-footer {
+    width: 80px;
+  }
+
+  .contact-text-box-grid-item h3 {
+    font-size: 20px;
+  }
+
+  .contact-text-box-grid-item p {
+    font-size: 14px;
+  }
+
+  footer h3 {
+    font-size: 28px;
+  }
+
+  .footer-donate p {
+    font-size: 14px;
+  }
+}
+
+/* 820px breakpoint */
+@media (max-width: 820px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .nav-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 0, 0, 0.4)
+    );
+    z-index: 1;
+    pointer-events: none;
+    height: 50vh;
+  }
+
+  .nav-header {
+    position: relative;
+    min-height: unset;
+    height: 50vh;
+    padding-top: 2rem;
+    overflow: hidden;
+    margin-bottom: -4px;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh !important;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center;
+  }
+
+  .hero {
+    padding: 10px 0 20px 0;
+  }
+
+  .tennessee {
+    padding-top: 20px 0 20px 0 !important;
+    margin-top: -2rem;
+  }
+
+  .btn-donate-footer {
+    width: 60px;
+  }
+}
+
+/* 768px breakpoint */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .nav-header {
+    position: relative;
+    height: 65vh !important;
+    min-height: unset;
+    padding-top: 1rem;
+    overflow: hidden;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65vh !important;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center;
+  }
+
+  .hero {
+    padding: 10px 0 20px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 0.1rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .important-links {
+    text-align: center;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* 468px breakpoint */
+@media (max-width: 468px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  /* Hero Section Adjustments */
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 0 !important;
+  }
+
+  /* Video background wrapper */
+  .nav-header {
+    position: relative;
+    height: 100vh !important;
+    padding-top: 1rem;
+    min-height: unset;
+    overflow: hidden;
+  }
+
+  /* The actual background video */
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh !important;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center;
+  }
+
+  /* Dark overlay on top of the video */
+  .nav-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+    pointer-events: none;
+    height: 100vh !important;
+  }
+
+  .nav-menu-pages {
+    margin-top: -2rem;
+  }
+
+  .logo-container-pages img {
+    margin-top: 0;
+  }
+
+  .tennessee {
+    margin-top: -1rem;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+  }
+
+  .hero h2 {
+    font-size: 35px;
+    margin-bottom: 8rem;
+  }
+
+  .hero-btn-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.3rem;
+    width: 250px;
+    border-radius: 30px;
+    border: 3px solid var(--white);
+    font-size: 1.2rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .pages-header h1 {
+    font-weight: 700;
+    font-size: 55px !important;
+    color: var(--primary-color);
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+      -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+    margin-top: -10px;
+  }
+
+  /* Tennsssee Section Adjustments */
+  .tennessee {
+    padding: 80px 0;
+  }
+
+  .tennessee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tennessee-grid-item-left h2 {
+    font-size: 30px;
+  }
+
+  .tennessee-stat-grid-item h3 {
+    font-size: 60px;
+  }
+
+  .tennessee-stat-grid-item h2 {
+    font-size: 22px;
+  }
+
+  .pages-header-container h1 {
+    font-size: 65px;
+  }
+
+  /* Endorsed Candidates Section Adjustments */
+
+  .endorsed-candidate-header h2 {
+    font-size: 55px;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  .candidate-carousel .carousel-placeholder-icon {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* About Page Adjustments */
+
+  .about-us-video {
+    display: block;
+  }
+
+  .about-us-video iframe {
+    width: 270px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about-section h2 {
+    display: none;
+  }
+
+  .about-kate-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  .kate-grid-item-image {
+    position: static;
+  }
+
+  .kate-grid-item img {
+    width: auto;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Endorsement Page Adjustments */
+  .about-endorsement-grid-item {
+    padding: 15px;
+  }
+
+  .btn-endorsement {
+    width: 210px;
+    font-size: 1rem;
+  }
+
+  .btn-past-candidates {
+    width: 220px;
+    font-size: 1rem;
+  }
+
+  .about-endorsement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .endorsed-candidate-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .endorsed-candidate-image-grid-item img {
+    width: 200px;
+  }
+
+  /* Elections Page Adjustments */
+  .register-to-vote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .register-to-vote-grid-item {
+    padding: 15px;
+  }
+
+  .btn-voter-registration-check {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-voter-registration {
+    width: 200px;
+    font-size: 1.1rem;
+  }
+
+  .btn-polling-location-check {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-sample-ballot {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .polling-location-box {
+    padding: 15px;
+    height: 380px;
+  }
+
+  .contact-text-box-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-text-box-grid-item {
+    padding: 15px;
+  }
+
+  .btn-application-contact {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .btn-donate-contact {
+    width: 200px;
+    font-size: 1rem;
+  }
+
+  .contact-text-box {
+    padding: 30px 15px 30px 15px;
+  }
+
+  /* Footer Adjustments */
+  footer {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-follow {
+    display: none;
+  }
+
+  .footer-follow-mobile {
+    display: grid;
+  }
+
+  .footer-follow-mobile h4 {
+    font-size: 1.3rem;
+  }
+
+  .important-links {
+    text-align: center;
+    margin-bottom: -2rem;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-follow-mobile {
+    margin-top: 2rem;
+  }
+
+  .footer-logo img {
+    margin-top: 0.5rem;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+}
+
+/* 390px breakpoint */
+@media (max-width: 390px) {
+  .tennessee-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .about-us-video iframe {
+    width: 250px;
+  }
+
+  .endorsed-candidate-image-grid-item img {
+    width: 150px !important;
+    height: auto;
+  }
+
+  .contact-text-box {
+    padding: 30px 15px 30px 15px;
+  }
+
+  .contact-text-box p {
+    margin: 0.5rem;
+    line-height: 1.5;
+    font-size: 16px;
+    text-shadow: -0.2px -0.2px 0 var(--white), 0.2px -0.2px 0 var(--white),
+      -0.2px 0.2px 0 var(--white), 0.2px 0.2px 0 var(--white);
+    text-align: center;
+  }
+
+  .contact-text-box-grid-item p {
+    font-weight: 300;
+  }
+}
